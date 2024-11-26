@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- META -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TITLE -->
+    <title>Weather App</title>
+    <!-- ICON -->
+    <link rel="icon" href="./Assets/logo@2x.png">
+    <!-- STYLES -->
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="Css/all.min.css">
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="Css/fontawesome.min.css">
+    <!-- main -->
+    <link rel="stylesheet" href="Css/styles.css">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg py-4">
+        <div class="container">
+            <a class="navbar-brand text-white " href="#"><img src="./Assets/logo@2x.png" class="w-50"
+                    alt="Weather-logo"> Weather
+            </a>
+            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto gap-4 mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active px-4 py-1 rounded-pill" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-4 py-1 rounded-pill" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-4 py-1 rounded-pill" href="#">Live cameras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-4 py-1 rounded-pill" href="#">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-4 py-1 rounded-pill" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- WEATHER -->
+
+    <section class="py-2">
+        <div class="container">
+            <form action="" class="position-relative">
+                <input type="text"
+                    class="form-control my-3 mx-auto shadow border rounded-pill p-3 bg-light text-body-emphasis"
+                    id="searchLocation" placeholder="Find your location...">
+                    <div class="alert alert-danger p-2 my-3 d-none" id="searchAlert">
+                        <small>Please enter a city name.</small>
+                    </div>
+                <button
+                    class="btn btn-primary border rounded-pill position-absolute top-0 end-0 py-3 px-5">Find</button>
+            </form>
+        </div>
+        <div class="container">
+            <div class="row" id="weatherRow">
+                <!-- TODAY WEATHER -->
+                <div class="today p-5 my-1 shadow bg-dark text-white border-2 rounded-5 col-md-4 ">
+                    <div
+                        class="day d-flex justify-content-between align-items-center text-center my-3 p-3 bg-light text-dark rounded-5">
+                        <span class="dayName"></span>
+                        <span class="date"></span>
+                    </div>
+                    <h5 class="city"></h5>
+                    <h1 class="cityTemp display-3 fw-bolder"></h1>
+                    <div class="d-flex justify-content-between flex-column align-items-center text-center">
+                        <img src="" class="weatherIcon w-50" alt="weather icon condition">
+                        <p class="weatherCond text-primary"></p>
+                    </div>
+                    <ul class="list-unstyled d-flex justify-content-between align-items-center h3">
+                        <li class="humidity"></li>
+                        <li class="speed"></li>
+                        <li class="direction"></li>
+                    </ul>
+                </div>
+                <!-- TOMORROW WEATHER -->
+                <div class="tomorrow p-5 my-1 shadow bg-dark text-white border-2 rounded-5 col-md-4 ">
+                    <div
+                        class="day d-flex justify-content-between align-items-center text-center my-3 p-3 bg-light text-dark rounded-5">
+                        <span class="tomorrowName"></span>
+                        <span class="tomorrowDate"></span>
+                    </div>
+                    <h1 class="cityTomorrowTemp display-5 fw-bolder text-center"></h1>
+                    <h4 class="cityTomorrowMinTemp fw-bolder text-center"></h4>
+                    <div class="d-flex justify-content-between flex-column align-items-center text-center">
+                        <img src="" class="weatherTomorrowIcon w-50" alt="weather icon condition">
+                        <p class="weatherTomorrowCond text-primary"></p>
+                    </div>
+                </div>
+                <!-- AFTER TOMORROW WEATHER -->
+                <div class="after-tomorrow p-5 my-1 shadow bg-dark text-white border-2 rounded-5 col-md-4 ">
+                    <div
+                        class="day d-flex justify-content-between align-items-center text-center my-3 p-3 bg-light text-dark rounded-5">
+                        <span class="afterTomorrowName"></span>
+                        <span class="afterTomorrowDate"></span>
+                    </div>
+                    <h1 class="cityAfterTomorrowTemp display-5 fw-bolder text-center"></h1>
+                    <h4 class="cityAfterTomorrowMinTemp fw-bolder text-center"></h4>
+                    <div class="d-flex justify-content-between flex-column align-items-center text-center">
+                        <img src="" class="weatherAfterTomorrowIcon w-50" alt="weather icon condition">
+                        <p class="weatherAfterTomorrowCond text-primary"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- FOOTER -->
+
+        <footer class="py-5">
+            <div class="container">
+                <div class="footer-content d-flex align-items-center gap-5">
+                    <form action="" class="w-100">
+                        <input type="text" class="input form-control rounded-pill py-3 text-dark"
+                            placeholder="Enter your email to subscribe...">
+                        <button class="btn btn-primary rounded-pill px-4 py-2 my-2">Subscribe</button>
+                    </form>
+    
+                    <div class="icons d-flex gap-2">
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <div class="icon d-flex justify-content-center align-items-center">
+                                <i class="fa-brands fa-facebook-f fs-4"></i>
+                            </div>
+                        </a>
+                        <a href="https://x.com/" target="_blank">
+                            <div class="icon d-flex justify-content-center align-items-center">
+                                <i class="fa-brands fa-twitter fs-4"></i>
+                            </div>
+                        </a>
+                        <a href="https://support.google.com/answer/2451065?hl=en" target="_blank">
+                            <div class="icon d-flex justify-content-center align-items-center">
+                                <i class="fa-brands fa-google-plus-g fs-4"></i>
+                            </div>
+                        </a>
+                        <a href="https://www.pinterest.com/" target="_blank">
+                            <div class="icon d-flex justify-content-center align-items-center">
+                                <i class="fa-brands fa-pinterest fs-4"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+    
+                <p class="text-light-emphasis mt-4 mb-0">Copyright 2014 Company name. Designed by  All rights reserved <a target="_blank" href="">Hussein Ragab</a>. All rights reserved</p>
+            </div>
+        </footer>
+    
+    <!-- JAVASCRIPT -->
+    <!-- bootstrap -->
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <!-- main -->
+    <script src="./Js/main.js"></script>
+</body>
+
+</html>

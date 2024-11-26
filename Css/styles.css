@@ -1,0 +1,67 @@
+nav {
+    background-color: #1e202b;
+  }
+  
+  .nav-link {
+    color: #ffffff;
+  }
+  
+  .nav-link {
+    border: #1e202b 2px solid;
+  }
+  
+  .navbar-nav .nav-link.active,
+  .navbar-nav .nav-link.show,
+  .nav-link:focus,
+  .nav-link:hover {
+    color: #009ad8;
+    border: #009ad8 2px solid;
+  }
+  
+
+  footer {
+    background-color: #262936;
+  }
+  
+  .icon i {
+    color: #009ad8;
+  }
+  
+  .icon {
+    width: 1.875rem;
+    height: 1.875rem;
+    background-color: #1e202b;
+    border-radius: 50%;
+    padding: 1.25rem;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.5s;
+  }
+  
+  .icon:hover {
+    background-color: #009ad8;
+  }
+  
+  .icon:hover i {
+    color: white;
+  }
+  
+  .icons a {
+    text-decoration: none;
+  }
+  
+  footer p a {
+    text-decoration: none;
+  }
+
+   section {
+    background-image: url('../Assets/banner.png');
+    background-repeat: no-repeat;
+  }
+  
+
+  body {
+    background-color: #1e202b;
+
+  }
+
